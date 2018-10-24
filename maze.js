@@ -1,4 +1,4 @@
-var loser = false;
+var end = false;
 var start = false;
 window.onload = function() { 
 	
