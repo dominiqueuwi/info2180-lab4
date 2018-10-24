@@ -1,4 +1,4 @@
-
+var loser = false;
 window.onload = function() { 
 	
 
@@ -17,11 +17,17 @@ function overBoundary() {
 } 
 
 function start() { 
-	loser= true; 
-	var boundaries = $$("div#maze div.boundary"); 
-	for (var i = 0; i < boundaries.length; i++) { 
-		boundaries[i].addClassName("youlose"); 
+	loser= false; 
+	var edges = $$("div#maze div.boundary"); 
+	for (var i = 0; i < edges.length; i++) { 
+		edges[i].removeClassName("youlose"); 
 	}
 
-
-
+function end() { 
+	if(loser= true) { 
+		alert("You Lose!");
+	} else { 
+		alert("You Win!");
+	}
+} 
+}
